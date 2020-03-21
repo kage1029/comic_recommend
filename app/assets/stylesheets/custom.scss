@@ -52,9 +52,9 @@ p {
 
 /* header */
 
-// header {
-//   background-color: #ffc400;
-// }
+header {
+  background-color: #ffc400;
+}
 
 #logo {
   float: left;
@@ -72,13 +72,53 @@ p {
   text-decoration: none;
 }
 
+.search{
+  padding-top: 15px;
+}
+
+// 入力中に出てくる青いラインを消す
+input[type="text"]:focus {
+  outline: 0;
+}
+
+#form #input{
+  vertical-align: top;
+  margin: 0px;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: white;
+  width:200px;
+  height: 20px;
+}
+
+#input{
+  border: none;
+  width: 170px;
+  padding-left: 10px;
+}
+
+#submit{
+  width: 25px;
+  height: 20px;
+  border: none;
+  margin-left: -30px;
+  background-image: url("search-icon.png");
+  background-position: center;
+  background-size: auto 90%;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+}
+
 /* footer */
 
 footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid #eaeaea;
-  color: #777;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px 0;
+  font-size: 14px;
+  background: #F0F0F0;
 }
 
 footer a {
@@ -87,14 +127,17 @@ footer a {
 
 footer a:hover {
   color: #222;
+  text-decoration: none;
 }
 
-footer ul {
-  float: center;
-  list-style: none;
+footer a::after {
+  display: inline-block;
+  content: "|";
+  margin: 0 30px;
+  color: #dbdad0;
 }
 
-footer ul li {
-  float: left;
-  margin-left: 15px;
+.footer.copyright{
+  display: block;
+  text-align: center;
 }
